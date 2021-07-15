@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="{{ url_for('updatePerson', idPerson=idPerson) }}" method="post">
+        <label for="">Ingrese Persona</label>
+        <div>
+            <input class="form-control" type="text" name="nombre" placeholder="nombre">
+        </div>
+        <div>
+            <input class="form-control" type="text" name="apellidoPaterno" placeholder="Apellido Paterno">
+        </div>
+        <div>
+            <input class="form-control" type="text" name="apellidoMaterno" placeholder="Apellido Materno">
+        </div>
+        <div>
+            <input class="form-control" type="text" name="nroDocumento" placeholder="Numero de Documento">
+        </div>
+        <button type="submit" class="btn btn-success">Success</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Tabla persona</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Numero de Documento</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in data %}
+        <tr>
+            
+                <td>{{ x.nombre }}</td>
+                <td>{{ x.apellidoPaterno }}</td>
+                <td>{{ x.apellidoMaterno }}</td>
+                <td>{{ x.nroDocumento }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
